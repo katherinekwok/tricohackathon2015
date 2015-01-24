@@ -3,9 +3,12 @@ from lxml import html
 import requests
 import csv
 
+# the current code works only for amazon
+
 basket = ['coke', 'sprite', 'red bull', 'monster energy drink']
 
-
+# need to replace the below for other websties 
+# for example, for kmart it's "http://www.kmart.com/search="
 url_before_query = "http://www.amazon.com/s/keyword="
 
 ###for later use ###
@@ -19,6 +22,7 @@ url_before_query = "http://www.amazon.com/s/keyword="
 for item in basket:
 	page = requests.get(url_before_query + item)
 	tree = html.fromstring(page.text)
+	# need to modify product and price for other websites, the below is specifically for amazon
 	product = tree.xpath('//h2[@class="a-size-medium s-inline s-access-title a-text-normal"]/text()')
 	price = tree.xpath('//span[@class="a-size-base a-color-price s-price a-text-bold"]/text()')
 
