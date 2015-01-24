@@ -98,9 +98,19 @@ About
     margin: 0 2%;
 }
 
-.abouttext #textarea{
+/**************************
+Shopping
+***************************/
+
+#mapholder {
+    display: block;
+    margin: 0 auto;
 }
 
+#go {
+    width: 150px;
+    font-size: 16px;
+}
 /**************************
 Footer
 ***************************/
