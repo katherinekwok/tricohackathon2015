@@ -3,9 +3,7 @@ Body
 ***************************/
 body {
     font-family: 'Rokkitt', serif;
-    background-image: url("../graphics/grocery.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #3c3379;
     padding-top: 70px;
 }
 
@@ -76,6 +74,6 @@ footer {
 	bottom:0;
 	left:0;
     color: white;
-    background-color: black;
+    background-color: #06031b;
 }
 
