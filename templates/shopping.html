@@ -37,7 +37,7 @@
                 Step 1. <br>
                 First, we need to start of by grabbing your location (Allow our website to look at your location): <br>
                 <button onclick="getLocation()" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Currently disabled" disabled>Try It</button><br>
-                    <form class="form-horizontal" method="get">
+                    <form class="form-horizontal" method="post">
                       <span class="form-group form-group-lg">
                         <span class="col-sm-10">
                           <input class="form-control" type="text" id="formGroupInputLarge" name = "address" placeholder="Alternatively, you can input your location: " value="">
@@ -49,7 +49,7 @@
                 <p>
                 Step 2. <br>
                 Set the maximum distance that Shoppr should look to obtain results:<br>
-                <form oninput="amount.value=rangeInput.value" method="get">
+                <form oninput="amount.value=rangeInput.value" method="post">
                     <input type="range" name="rangeInput" min="0" max="5" step="0.1" onchange="updateTextInput(this.value);"><br>
                     <center><input type="text" name="maxRange" id="maxRange" value=""></center>
                 </form>
@@ -58,7 +58,7 @@
                 <p>
                 Step 3. <br>
                 What would you like to buy: 
-                <form method="get">
+                <form method="post">
                     <label class="sr-only" for="inputHelpBlock">Search bar</label>
                     <input type="text" id="inputHelpBlock" class="form-control" name="searchItem" aria-describedby="helpBlock" value="">
                     <span id="helpBlock" class="help-block"><em>ie. apples, flannel shirt, shampoo</em></span>
@@ -66,8 +66,10 @@
                 </p><br>
                 <p>
                 Step 4. <br>
-                Ready, set...<br>  
-                <button type="button" class="btn btn-success" id="go">Go!</button>
+                Ready, set...<br>
+                <form action="shopping2.html" method="POST">
+                    <input class="btn btn-default" type="submit" value="Go!">
+                </form>
                 </p><br><br>
                 </div>
         </section>
